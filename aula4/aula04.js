@@ -12,8 +12,8 @@ let num1=3, num2=10, res=0;
 
 res = ((num1 + num2) * 6) / 2;
 
-console.log(res)
+console.log(res);
 res++;
-console.log(res)
+console.log(res);
 
-console.log(num2 % num1)
+console.log(num2 % num1);
