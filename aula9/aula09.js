@@ -14,6 +14,10 @@ n += 10;
 n -= 12;
 
 
+let n1 = '10';
+let n2 = '20';
+
 console.log(++n);
 console.log(n);
 console.log(x)
+console.log(n1 + n2)
