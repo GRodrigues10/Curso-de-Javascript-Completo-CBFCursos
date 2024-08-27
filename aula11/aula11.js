@@ -1,3 +1,5 @@
+// TypeOf
+
 let v1 = 1;
 let v2 = '1';
 let v3 = v1===v2;
