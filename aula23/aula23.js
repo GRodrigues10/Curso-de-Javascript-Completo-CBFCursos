@@ -1,3 +1,4 @@
+// Rest
 function soma(...valores){
     let tam = valores.length
     let res = 0;
