@@ -1,3 +1,5 @@
+// getElementById: Retona uma Array
+
 const c1 = document.getElementById('c1');
 const c2 = document.getElementById('c2');
 const c3 = document.getElementById('c3');
