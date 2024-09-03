@@ -10,5 +10,4 @@
     console.log(caixa1.children[4]);
     console.log(caixa1.firstElementChild);
     console.log(caixa1.lastElementChild);
-    console.log(document.getRootNode
-    ));
+    console.log(document.getRootNode());
