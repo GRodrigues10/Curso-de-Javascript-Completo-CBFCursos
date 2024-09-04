@@ -1,19 +1,26 @@
-const caixa1 = document.querySelector('#caixa1');
-const btn_c = document.querySelectorAll('.curso');
-const cursos = ['HTML', 'CSS', 'JAVASCRIPT','REACT JS', 'REACT NATIVE', 'TYPESCRIPT'];
+// Filter:
+const idades = [10, 22, 34, 65, 15, 4];
+// const filtroMaiorIdade = (valor) => {
 
-cursos.map((e, i)=>{
-    const novoElemento = document.createElement('div');
-    novoElemento.setAttribute('id', `c${i+1}`);
-    novoElemento.setAttribute('class', 'curso c2')
-    novoElemento.innerHTML = e;
-    const btn_lixeira = document.createElement('img');
-    btn_lixeira.setAttribute('src', './lixo.png');
-    btn_lixeira.setAttribute('class', 'btn-lixeira');
-    btn_lixeira.addEventListener('click', (e)=>{
-        caixa1.removeChild(e.target.parentNode)
-    })
-    novoElemento.appendChild(btn_lixeira)
-    caixa1.appendChild(novoElemento);
-})
+//     if(valor >= 18){
+//         return valor
+//     }
+
+// }
+const maior = idades.filter((v)=>{
+    if(v >= 18){
+        return v;
+    }
+});
+
+console.log(idades)
+console.log(maior)
+
+// Exemplo:
+// const filtroMaiorIdade = (valor, indice, array) => {
+
+// }
+
+
+
 
