@@ -19,7 +19,7 @@ cursos.map((e, i)=>{
     rb.setAttribute('name', 'rb_curso');
 
     comandos.appendChild(rb);
-    novoElemento.appendChild(comandos);
+    novoElemento.appendChild(comandos); 
 
     caixaCursos.appendChild(novoElemento)
 });
