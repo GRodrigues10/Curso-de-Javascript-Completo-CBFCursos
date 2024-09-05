@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 46</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-size:large;
+        }
+
+        .caixa{
+            border: 5px solid #000;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .verde{ 
+            border-color: rgb(38, 192, 38) !important;
+            background-color: #fff !important;
+        }
+
+        .azul{ 
+            border-color: rgb(52, 52, 216) !important;
+            background-color: #fff !important;
+        }
+
+
+        .vermelho{ 
+            border-color: rgb(206, 41, 41) !important;
+            background-color: #fff !important;
+        }
+
+       button{
+        width: 125px;
+        height: 40px;
+        background-color: purple;
+        color: white;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-top: 5px;
+       }
+
+     
+    </style>
+</head>
+<body>
+
+    <div id="caixa_array" class="caixa verde">
+        <p>Array:</p>
+        <p id="array"></p>
+    </div>
+    <div id="caixa_pesquisar" class="caixa azul">
+        <label>Pesquisar por</label>
+
+        <button id="btnVerificar">Verificar</button>
+    </div>
+    <div id="caixa_resultado" class="caixa vermelho">
+        <p>Resultado:</p>
+        <p id="resultado"></p>
+    </div>
+
+    <script src="aula47.js"></script>
+
+</body>
+</html>
