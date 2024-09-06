@@ -5,7 +5,7 @@ const p_array = document.getElementById('array');
 const btnVerificar = document.getElementById('btnVerificar');
 const resultado = document.getElementById('resultado');
 
-const elementos_array = [1, 15, 12, 66, 6, 3, 10, 5, 5];
+const elementos_array = [1, 5, 12, 6, 6, 8, 10, 5, 95];
 p_array.innerHTML = '['+elementos_array+']';
 
 btnVerificar.addEventListener('click',(e)=>{
