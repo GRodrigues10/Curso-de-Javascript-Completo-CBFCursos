@@ -5,27 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 52</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-size: large;
-        }
-
-        .caixa{
-            border: 5px solid #000;
-            width: 400px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            margin: 5px;
-            padding: 5px;
-
-        }
+     
     </style>
 </head>
 <body>
-    <div id="caixa" class="caixa"></div>
+    
+    <div class="valor">
+        <label>Valor 1</label>
+        <input type="text" value="0" name="valor1" id="valor1">
+    </div>
+
+    <div class="valor">
+        <label>Valor 2</label>
+        <input type="text" value="0" name="valor2" id="valor2">
+    </div>
+
+    <div class="valor">
+        <label>Valor 3</label>
+        <input type="text" value="0" name="res" id="res" readonly style="cursor:not-allowed">
+    </div>
+
+    <div class="operacoes">
+        <button id="btn_soma">+</button>
+        <button id="btn_subtracao">-</button>
+        <button id="btn_multiplicacao">X</button>
+        <button id="btn_divisao">/</button>
+    </div>
+
+
+
     <script src="aula53-54.js"></script>
 </body>
 </html>
