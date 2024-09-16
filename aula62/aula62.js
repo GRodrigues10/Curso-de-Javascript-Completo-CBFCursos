@@ -22,7 +22,11 @@ class Carro{ //Classe PAI
 }
 
 class Militar extends Carro{
+    constructor(nome, portas, blindagem, municao){
+        super(nome, po        rtas);
 
+
+    }
 }
 
 const c1 = new Carro('Normal', 5, 'Azul');
