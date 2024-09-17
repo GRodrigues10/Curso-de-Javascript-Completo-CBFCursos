@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 63</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-size: large;
+        }
+        .carros {
+            display: flex;
+            width: 100%;
+            border: 3px solid black;
+            padding: 5px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .carro {
+            border: 3px #008 solid;
+            background-color: #8cf;
+            padding: 5px;
+            border-radius: 5px;
+            display: flex;
+            width: 200px;
+            margin-right: 10px;
+        }
+        .campoForm, .radio {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="criarCarro" id="criarCarro">
+        <div class="campoForm">
+            <label for="f_nome">Nome</label>
+            <input type="text" id="f_nome" name="f_nome">
+        </div>
+
+        <div class="campoForm">
+            <label for="f_portas">Portas</label>
+            <input type="number" id="f_portas" name="f_portas">
+        </div>
+
+        <div class="campoForm">
+            <label for="f_blindagem">Blindagem</label>
+            <input type="number" id="f_blindagem" name="f_blindagem" value="0">
+        </div>
+
+        <div class="campoForm">
+            <label for="f_municao">Munição</label>
+            <input type="number" id="f_municao" name="f_municao" value="0">
+        </div>
+
+        <div class="campoForm">
+            <label>Tipo</label>
+            <input type="radio" id="f_tipoMilitar" name="f_tipo" value="m">
+            <label for="f_tipoMilitar">Militar</label>
+            <input type="radio" id="f_tipoNormal" name="f_tipo" value="n">
+            <label for="f_tipoNormal">Normal</label>
+        </div>
+
+        <div class="campoForm">
+            <button type="button" id="btn_addCarro">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="carros"></div>
+
+    <script src="aula64.js"></script>
+</body>
+</html>
