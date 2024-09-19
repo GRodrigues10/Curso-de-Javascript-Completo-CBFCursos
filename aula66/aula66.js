@@ -1,24 +1,25 @@
-// Objetos 
-
-const pessoa = {
-    nome:'Gabriel',
-    canal:'CFB Cursos',
-    curso: 'Javascript',
-    aulas:{
-        aula01:'Introdução',
-        aula02:'Variáveis',
-        aula03:'Condicional'
+class Npc{
+    static alerta = false;
+    constructor(energia){
+        this.energia = energia;
+        // this.alerta = true;
+    }
+    info = function(){
+        console.log(`Energia:${this.energia} \n Alerta: ${Npc.alerta ? 'Sim': 'Não'}`);
+        console.log('--------------------')
     }
 }
 
-// console.log(pessoa);
-// console.log(pessoa.nome);
-// console.log(pessoa.aulas)
+const npc1 = new Npc(100);
+const npc2 = new Npc(80);
+const npc3 = new Npc(30);
 
-const string_pessoa = '{"nome":"Gabriel","canal":"CFB Cursos","curso":"Javascript","aulas":{"aula01":"Introdução","aula02":"Variáveis","aula03":"Condicional"}'
+Npc.alerta = true;
 
-const s_json_pesssoa = JSON.stringify(pessoa);//Converte objeto em string json
-const o_json_pesssoa = JSON.stringify(pessoa);// Converte string json em objeto
-console.log(pessoa)
-console.log(s_json_pesssoa)
-console.log(o_json_pesssoa)
+npc1.info();
+npc2.info();
+npc3.info();
+
+// console.log(npc1.energia)
+// console.log(npc2.energia)
+// console.log(npc3.energia)
