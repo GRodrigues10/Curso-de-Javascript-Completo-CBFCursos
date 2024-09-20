@@ -7,6 +7,9 @@ class Npc{
     info = function(){
         console.log(`Energia:${this.energia} \n Alerta: ${Npc.alerta ? 'Sim': 'Não'}`);
         console.log('--------------------')
+    }          
+    static alertar = function(){
+        Npc.alerta = true
     }
 }
 
