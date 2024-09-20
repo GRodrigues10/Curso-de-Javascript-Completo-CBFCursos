@@ -3,6 +3,9 @@
 const Nave = function(energia){
     this.energia = energia;
     this.disparos = 20;
+    this.teste = function(){
+        console.log('Testando')
+    }
 }
 
 
@@ -26,3 +29,4 @@ n1.disparar();
 n1.disparar();
 
 console.log(n1.disparos)
+n1.teste()
