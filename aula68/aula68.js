@@ -20,9 +20,9 @@ class Carro{
         this.velMax += this.turbo
     }
     info(){
-        console.log(`Nome:${this.nome}`);
+        console.log(`${this.nome}`);
         console.log(`Velociada Máxima:${this.velMax}`);
-        console.log(`Turbo:${this.turbo}`);
+        console.log(`${this.turbo}`);
         console.log('--------------------')
     }
 }
@@ -52,6 +52,12 @@ class CarroEspecial extends Carro{
         super(4, estagioTurbo);
         this.velMax = 300;
         this.nome =  'Carro Especial';
+    }
+    info(){
+        console.log(`Nome:${this.nome}`);
+        console.log(`Velociada Máxima:${this.velMax}`);
+        console.log(`Turbo:${this.turbo}`);
+        console.log('--------------------')
     }
 }
 
