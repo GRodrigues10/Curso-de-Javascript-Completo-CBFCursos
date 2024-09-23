@@ -46,8 +46,9 @@ class Carro extends CarroPadrao {
         this.ligado = true;
         console.log(`${this.nome} ligado!`);
     }
-    desligar(){
-        this.desligado = true;
+
+    desligar() {
+        this.ligado = false; // Fix: change 'this.desligado' to 'this.ligado'
         console.log(`${this.nome} desligado!`);
     }
 }
@@ -92,3 +93,5 @@ c2.info();
 c3.info();
 c1.ligar();
 c2.ligar();
+c1.desligar();
+c2.desligar();
