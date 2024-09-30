@@ -6,19 +6,22 @@ const teclaOnOff = document.getElementById('teclaOnOff');
 const teclaLimpar = document.getElementById('teclaLimpar');
 
 let sinal = false;
+let ligado = true; // Novo estado para controlar ON/OFF
 
 // Adicionando evento para números
 teclasNum.forEach((el) => {
     el.addEventListener('click', (e) => {
-        display.innerHTML += e.target.innerHTML;
-        sinal = false; // Reseta sinal quando um número é clicado
+        if (ligado) { // Verifica se a calculadora está ligada
+            display.innerHTML += e.target.innerHTML;
+            sinal = false; // Reseta sinal quando um número é clicado
+        }
     });
 });
 
 // Adicionando evento para operadores
 teclasOp.forEach((el) => {
     el.addEventListener('click', (e) => {
-        if (!sinal) {
+        if (ligado && !sinal) {
             sinal = true;
             if (display.innerHTML === '0') {
                 display.innerHTML = '';
@@ -33,15 +36,31 @@ teclasOp.forEach((el) => {
 });
 
 // Adicionando evento para limpar
-teclaLimpar.addEventListener('click', (e) => {
-    display.innerHTML = ''; // Limpa o display
+teclaLimpar.addEventListener('click', () => {
+    if (ligado) { // Verifica se a calculadora está ligada
+        display.innerHTML = ''; // Limpa o display
+    }
 });
 
 // Adicionando evento para calcular o resultado
 teclaRes.addEventListener('click', () => {
-    try {
-        display.innerHTML = eval(display.innerHTML.replace(/x/g, '*')); // Calcula a expressão
-    } catch (error) {
-        display.innerHTML = 'Error'; // Em caso de erro, mostra "Error"
+    if (ligado) { // Verifica se a calculadora está ligada
+        try {
+            display.innerHTML = eval(display.innerHTML.replace(/x/g, '*')); // Calcula a expressão
+        } catch (error) {
+            display.innerHTML = 'Error'; // Em caso de erro, mostra "Error"
+        }
     }
+});
+
+// Adicionando evento para ligar/desligar
+teclaOnOff.addEventListener('click', (e) => {
+    if (ligado) {
+        display.innerHTML = ''; // Limpa o display
+        e.target.innerHTML = 'OFF'; // Muda para OFF
+    } else {
+        display.innerHTML = '0'; // Reseta para '0' ao ligar
+        e.target.innerHTML = 'ON'; // Muda para ON
+    }
+    ligado = !ligado; // Alterna o estado
 });
