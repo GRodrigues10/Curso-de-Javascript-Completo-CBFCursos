@@ -3,7 +3,10 @@ const teclasOp = [...document.querySelectorAll('.op')];
 const teclaRes = document.querySelector('.res');
 const display = document.querySelector('.display');
 const teclaOnOff = document.getElementById('teclaOnOff');
+const teclaCPY = document.getElementById('teclaCPY');
 const teclaLimpar = document.getElementById('teclaLimpar');
+const teste = document.getElementById('teste');
+
 
 let sinal = false;
 let ligado = true; // Novo estado para controlar ON/OFF
@@ -64,3 +67,11 @@ teclaOnOff.addEventListener('click', (e) => {
     }
     ligado = !ligado; // Alterna o estado
 });
+
+teclaCPY.addEventListener('click', (e)=>{
+    // navigator.clipboard.writeText(display.innerHTML)
+    teste.select();
+    teste.setSelectionRange(0,99999)// Mobile
+    navigator.clipboard.writeText(teste.value)
+})
+
