@@ -69,9 +69,9 @@ teclaOnOff.addEventListener('click', (e) => {
 });
 
 teclaCPY.addEventListener('click', (e)=>{
-    // navigator.clipboard.writeText(display.innerHTML)
-    teste.select();
-    teste.setSelectionRange(0,99999)// Mobile
-    navigator.clipboard.writeText(teste.value)
+    navigator.clipboard.writeText(display.innerHTML)
+    // teste.select();
+    // teste.setSelectionRange(0,99999)// Mobile
+    // navigator.clipboard.writeText(teste.value)
 })
 
