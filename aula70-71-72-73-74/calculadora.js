@@ -6,6 +6,8 @@ const teclaOnOff = document.getElementById('teclaOnOff');
 const teclaCPY = document.getElementById('teclaCPY');
 const teclaLimpar = document.getElementById('teclaLimpar');
 const teste = document.getElementById('teste');
+const calcAba = document.getElementById('calcAba');
+const calc = document.getElementById('calc');
 
 
 let sinal = false;
@@ -75,3 +77,7 @@ teclaCPY.addEventListener('click', (e)=>{
     // navigator.clipboard.writeText(teste.value)
 })
 
+
+calcAba.addEventListener('click', (e)=>{
+    calc.classList.toggle('calcExibir');//Se tiver a classse exibir, coloca, se não, não coloca
+})

@@ -6,8 +6,28 @@
     font-size: large;
 }
 
-
 .calc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: 0px;
+    left: -230px;
+}
+
+.calcAba{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 50px;
+    background-color: rgba(138, 128, 128, 0.2);
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+}
+
+.calcPrincipal{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,6 +37,14 @@
     width: 230px;
     padding: 10px;
     border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.calcExibir{
+    left: 0 !important;
+    transition: 0.3s ease;
+
+
 }
 
 .div_nome{
