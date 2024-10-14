@@ -5,15 +5,15 @@ btn.addEventListener('click', (e)=>{
     numero.innerHTML = 'Processando...'
     promessa()
     .then((retorno)=>{
-        numero.innerHTML = retorno
+        numero.innerHTML = retorno;
         numero.classList.remove('erro');
-        numero.classList.add('ok')
+        numero.classList.add('ok');
     })//Deu certo!
     .catch((retorno)=>{
-        numero.innerHTML = retorno
+        numero.innerHTML = retorno;
         numero.classList.add('erro');
-        numero.classList.remove('ok')
-    })//Deu errado!
+        numero.classList.remove('ok');
+    });//Deu errado!
     
     
 });
@@ -25,9 +25,9 @@ const promessa = () =>{
         
         setTimeout(()=>{
             if(resultado){
-                resolve('Deu tudo certo!')
+                resolve('Deu tudo certo!');
             }else{
-                reject('Deu ruim kkkk')
+                reject('Deu ruim kkkk');
             }
         }, tempo);
     
@@ -49,4 +49,4 @@ const promessa = () =>{
 //     numero.classList.remove('ok')
 // }
 
-numero.innerHTML = 'Esperando...'
+numero.innerHTML = 'Esperando...';
