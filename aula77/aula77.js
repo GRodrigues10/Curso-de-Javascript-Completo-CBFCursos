@@ -1,9 +1,17 @@
 const data = new Date();
 // console.log(Date.now());//Timestamp
 
-const data_r = data.getDate()+'/'+data.getMonth()+'/'+data.getFullYear();
+let dia = data.getDate();
+dia = dia < 10?'0'+dia:dia;
+
+let mes = data.getMonth();
+mes = mes < 10?'0'+mes:mes;
+
+
+// const mes = data.getMonth()<10?'0'+data.Month():data.getMonth();
+const data_r = dia +'/'+mes+'/'+data.getFullYear();
 const div_data = document.getElementById('div-data');
-div_data.innerHTML = data_r
+div_data.innerHTML = data_r;
 
 console.log(data.getDate());// Dia do mês
 console.log(data.getDay());// Dia da semana
