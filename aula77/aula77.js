@@ -8,3 +8,15 @@ console.log(data.getHours());// Horas
 console.log(data.getMilliseconds());// Milisegundos
 console.log(data.getMinutes());// Minutos
 console.log(data.getSeconds());// Segundos ...
+
+
+
+
+// setDate() = Define um dia para a data.
+// setMonth() = Define um mês para a data.
+// setFullYear() = Define um ano para a data.
+// setHours() = Define horas.
+// setDate() = Define minutos.
+// setSeconds() = Define segundos.
+// setMiliSeconds() = Define Milisegundos.
+// toDateString() = Retorna somente a data.
