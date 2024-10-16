@@ -22,6 +22,12 @@ console.log(data.getMinutes());// Minutos
 console.log(data.getSeconds());// Segundos ...
 
 
+// Relógio:
+
+const div_relogio = document.getElementById(div-relogio);
+
+
+
 
 
 // setDate() = Define um dia para a data.
