@@ -1,6 +1,10 @@
 const data = new Date();
 // console.log(Date.now());//Timestamp
 
+const data_r = data.getDate()+'/'+data.getMonth()+'/'+data.getFullYear();
+const div_data = document.getElementById('div-data');
+div_data.innerHTML = data_r
+
 console.log(data.getDate());// Dia do mês
 console.log(data.getDay());// Dia da semana
 console.log(data.getFullYear());// Ano com 4 dígitos
