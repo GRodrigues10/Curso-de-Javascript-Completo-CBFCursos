@@ -5,12 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 82</title>
     <style>
-    
+    *{
+        border: none;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .controles{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #eee;
+        border: 2px solid #000;
+        border-radius: 5px;
+    }
+    .controle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #fff;
+        border: 2px solid #888;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+    }
+    button{
+        cursor: pointer;
+        background-color: #888;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    input[type='number'], #num_objetos{
+
+        border: 1px solid #000;
+        padding: 5px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        width: 150px;
+
+    }
+
+    .palco{
+        display: flex;
+        width: 100%;
+        min-height: 100vh;
+        min-height: fill-availble;
+        min-height: -webkit-fill-availble;
+        background-color: #ccc;
+        border: 2px solid #000;border-radius: 5px;
+        position: absolute;
+        overflow: hidden;
+    }
+    .bola{
+        position: absolute;
+        border-radius: 100px;
+    }
     </style>
 </head>
-<body>
-    <img src="vader.png" alt="Imagem do Darth Vader" id="vader_e">
-    <img src="vader.png" alt="Imagem do Darth Vader" id="vader_d">
+<div>
+    <div class="controles" id="controles">
+   <div class="controle" id="controle">
+    <label>Número de Objetos</label>
+    <p id="num_objetos">0</p>
+   </div>
+   <div class="controle">
+    <label>Quantidade Objetos</label>
+    <input type="number" value="0" min="0" id="txt_qtde">
+    <button id="btn_add">Adicionar</button>
+   </div>
+   <div class="controle">
+    <button id="btn_remover">Remover Todos</button>
+   </div>
+</div>
+<div class="palco" id="palco"></div>
     <script src="aula82.js"></script>
 </body>
 </html>
