@@ -11,3 +11,27 @@ let bolas = [];
 let numBola = 0;
 
 
+window.addEventListener('resize', (e)=>{
+     larguraPalco = palco.offsetWidth;
+     alturaPalco = palco.offsetHeight;
+     
+})
+
+btn_add.addEventListener('click', (e)=>{
+    
+    const qtde = txt_qtde.value;
+    for(let i = 0; i < qtde; i++){
+        // Criar bolinhas..(Instanciar novas bolinhas)
+    }
+    
+})
+
+btn_remover.addEventListener('click', (e)=>{
+
+
+    bolas.map((elemento)=>{
+        // Remover bolinha...
+    })
+    
+})
+
