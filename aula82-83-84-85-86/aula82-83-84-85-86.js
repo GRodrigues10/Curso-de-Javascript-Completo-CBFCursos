@@ -11,6 +11,7 @@ let bolas = [];
 let numBola = 0;
 
 class Bola{
+    
     constructor(arrayBolas, palco){
         this.tam = Math.floor((Math.random()*10)) + 10;
         this.r =  Math.floor(Math.random()*255);
@@ -29,6 +30,7 @@ class Bola{
         this.controle = setInterval(this.controlar, 10);
         this.eu = document.getElementById(this.id);
     } 
+
     minhaPos = () =>{
 
     }
