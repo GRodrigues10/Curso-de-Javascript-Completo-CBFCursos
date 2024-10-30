@@ -11,7 +11,7 @@ let bolas = [];
 let numBola = 0;
 
 class Bola{
-    
+
     constructor(arrayBolas, palco){
         this.tam = Math.floor((Math.random()*10)) + 10;
         this.r =  Math.floor(Math.random()*255);
@@ -29,18 +29,33 @@ class Bola{
         this.desenhar();
         this.controle = setInterval(this.controlar, 10);
         this.eu = document.getElementById(this.id);
+        numBola++;
+        num_objetos.innerHTML = numBola;
     } 
 
     minhaPos = () =>{
-
+        return this.arrayBolas.indexOf(this);
     }
     
     remover = () =>{
+        clearInterval(this.controle);
+        bolas = bolas.filter((bola)=>{
+            if(bola.id !=this.id){
+                return bola;
+            } 
+        });
+        this.eu.remove();
+        numBola--;
+        num_objetos.innerHTML = numBola;
 
     }
 
     desenhar = () =>{
-
+        const div = document.createElement('div');
+        div.setAttribute('id', this.id);
+        div.setAttribute('class', 'bola');
+        div.setAttribute('style', `left:${this.px}; top:${this.py}; width:${this.tam}; height: ${this.tam}; background-color = rgb(${this.r}, ${this.g}, ${this.b}) `);
+        this.palco.appendChild(div);
     }
 
     controlar = () =>{
