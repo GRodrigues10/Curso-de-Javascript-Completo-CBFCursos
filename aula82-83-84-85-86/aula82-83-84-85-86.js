@@ -54,7 +54,7 @@ class Bola{
         const div = document.createElement('div');
         div.setAttribute('id', this.id);
         div.setAttribute('class', 'bola');
-        div.setAttribute('style', `left:${this.px}; top:${this.py}; width:${this.tam}; height: ${this.tam}; background-color = rgb(${this.r}, ${this.g}, ${this.b}) `);
+        div.setAttribute('style', `left:${this.px}px; top:${this.py}px; width:${this.tam}px; height: ${this.tam}px; background-color:rgb(${this.r}, ${this.g}, ${this.b}) `);
         this.palco.appendChild(div);
     }
 
@@ -80,7 +80,7 @@ class Bola{
         this.controle_bordas();
         this.px += this.dirx * this.velx;
         this.py += this.diry * this.vely;
-        this.eu.setAttribute('style', `left:${this.px}; top:${this.py}; width:${this.tam}; height: ${this.tam}; background-color = rgb(${this.r}, ${this.g}, ${this.b}) `);
+        this.eu.setAttribute('style', `left:${this.px}px; top:${this.py}px; width:${this.tam}px; height: ${this.tam}px; background-color:rgb(${this.r}, ${this.g}, ${this.b}) `);
         if((this.px > larguraPalco) || (this.py > alturaPalco)){
             this.remover();
         }
@@ -99,15 +99,16 @@ btn_add.addEventListener('click', (e)=>{
     const qtde = txt_qtde.value;
     for(let i = 0; i < qtde; i++){
         // Criar bolinhas..(Instanciar novas bolinhas)
+        bolas.push(new Bola(bolas, palco));
     }
     
 })
 
 btn_remover.addEventListener('click', (e)=>{
 
-
     bolas.map((elemento)=>{
         // Remover bolinha...
+        elemento.remover();
     })
     
 })
