@@ -16,5 +16,12 @@ btn_confirm.addEventListener('click', (e)=>{
 });
 
 btn_prompt.addEventListener('click', (e)=>{
-    prompt('Digite algo e no prompt');
+     let msg = prompt('Digite algo e no prompt');
+     if(msg){
+        console.log(`Você escreveu: ${msg}`);
+     }
+     else{
+        console.log('Você cancelou a operação!')
+     }
+    
 });
