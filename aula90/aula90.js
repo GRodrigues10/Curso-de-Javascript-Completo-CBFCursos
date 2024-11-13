@@ -4,7 +4,13 @@ const computador = {
     cpu:'i9',
     ram:'64gb',
     hd:'2tb',
-    ssd:'500gb'
+    ssd:'500gb',
+    info:function(){
+        console.log(`CPU:${this.cpu}`);
+        console.log(`RAM:${this.ram}`);
+        console.log(`HD:${this.hd}`);
+        console.log(`SSD:${this.ssd}`);
+    }
 }
 const computadores = [{
     cpu:'i9',
@@ -26,7 +32,11 @@ const computadores = [{
 }];
 // console.log(computador)
 // objetos.innerHTML = JSON.stringify(computador);
-
+// computador.info();
 computadores.forEach((e)=>{
-    objetos.innerHTML += JSON.stringify(e) + '<br>'
+    // objetos.innerHTML += JSON.stringify(e) + '<br>'
+
+    const div = document.createElement('div');
+    div.innerHTML = JSON.stringify(e) + '<br>'
+    objetos.appendChild(div)
 })
