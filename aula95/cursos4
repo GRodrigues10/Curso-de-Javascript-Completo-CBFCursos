@@ -1,0 +1,25 @@
+class Cursos{
+     static cursos = ['Javascript', 'Python', 'C'];
+     constructor(){}
+
+     static getTodosCursos = ()=>{
+        return this.cursos;
+     }
+
+     static getCurso = (index_curso)=>{
+        return this.cursos[index_curso];
+     }
+
+     static addCurso = (novocurso)=>{
+        return this.cursos.push(novocurso);
+     }
+
+     static delCurso = ()=>{
+        return this.cursos = [];
+     }
+
+}
+
+export default Cursos;
+
+
