@@ -1,0 +1,6 @@
+let contatos = [];
+
+
+
+
+export {contatos};
