@@ -1,5 +1,6 @@
 const cursos = ['Javascript', 'Python', 'Java', 'PHP']
 const cursosParágrafo = document.getElementById('cursos');
+console.log(cursos);
 
 
 function getFullCursos(){
